@@ -1,2 +1,151 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://Meekdai.github.io/Gmeek-template</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://Meekdai.github.io/Gmeek-template</link></image><lastBuildDate>Thu, 14 Mar 2024 09:17:29 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>请接着之后的安装步骤执行</title><link>https://Meekdai.github.io/Gmeek-template/post/qing-jie-zhao-zhi-hou-de-an-zhuang-bu-zou-zhi-xing.html</link><description>如果你点击了`READM.md`的链接后，看到了这个页面，请继续之后的安装步骤执行。</description><guid isPermaLink="true">https://Meekdai.github.io/Gmeek-template/post/qing-jie-zhao-zhi-hou-de-an-zhuang-bu-zou-zhi-xing.html</guid><pubDate>Thu, 14 Mar 2024 09:15:10 +0000</pubDate></item><item><title>这是Gmeek模板仓库</title><link>https://Meekdai.github.io/Gmeek-template/post/zhe-shi-Gmeek-mo-ban-cang-ku.html</link><description>通过这个模板创建库，可以大大减少部署Gmeek博客的配置步骤。</description><guid isPermaLink="true">https://Meekdai.github.io/Gmeek-template/post/zhe-shi-Gmeek-mo-ban-cang-ku.html</guid><pubDate>Wed, 20 Dec 2023 07:42:24 +0000</pubDate></item></channel></rss>
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Blog Title</title><link>https://danzeng1.github.io/DaHH.githud.ao</link><description>Blog description</description><copyright>Blog Title</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://github.githubassets.com/favicons/favicon.svg</url><title>avatar</title><link>https://danzeng1.github.io/DaHH.githud.ao</link></image><lastBuildDate>Fri, 09 May 2025 08:42:44 +0000</lastBuildDate><managingEditor>Blog Title</managingEditor><ttl>60</ttl><webMaster>Blog Title</webMaster><item><title>览境</title><link>https://danzeng1.github.io/DaHH.githud.ao/post/lan-jing.html</link><description>&lt;!DOCTYPE html&gt;
+&lt;html lang='zh-CN'&gt;
+&lt;head&gt;
+  &lt;meta charset='UTF-8'&gt;
+  &lt;meta name='viewport' content='width=device-width, initial-scale=1.0'&gt;
+  &lt;title&gt;观澜景色 - 探索自然之美&lt;/title&gt;
+  &lt;script src='https://cdn.tailwindcss.com'&gt;&lt;/script&gt;
+  &lt;link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' rel='stylesheet'&gt;
+  &lt;link rel='preconnect' href='https://fonts.googleapis.com'&gt;
+  &lt;link rel='preconnect' href='https://fonts.gstatic.com' crossorigin&gt;
+  &lt;link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap' rel='stylesheet'&gt;
+  
+  &lt;script&gt;
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E88E5',
+            secondary: '#4DB6AC',
+            accent: '#FF9800',
+            neutral: '#F5F7FA',
+            dark: '#2A3342'
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+        },
+      }
+    }
+  &lt;/script&gt;
+  
+  &lt;style type='text/tailwindcss'&gt;
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      .text-shadow-lg {
+        text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body class='font-inter bg-neutral text-dark antialiased'&gt;
+  &lt;!-- 导航栏 --&gt;
+  &lt;header id='navbar' class='fixed w-full top-0 z-50 transition-all duration-300'&gt;
+    &lt;nav class='bg-transparent py-4 px-6 md:px-12 flex justify-between items-center'&gt;
+      &lt;div class='flex items-center'&gt;
+        &lt;a href='#' class='text-2xl font-bold text-white text-shadow flex items-center'&gt;
+          &lt;i class='fa fa-mountain mr-2'&gt;&lt;/i&gt;
+          &lt;span&gt;观澜景色&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      
+      &lt;!-- 桌面导航 --&gt;
+      &lt;div class='hidden md:flex items-center space-x-8'&gt;
+        &lt;a href='#home' class='text-white hover:text-accent transition-colors font-medium'&gt;首页&lt;/a&gt;
+        &lt;a href='#attractions' class='text-white hover:text-accent transition-colors font-medium'&gt;景点介绍&lt;/a&gt;
+        &lt;a href='#gallery' class='text-white hover:text-accent transition-colors font-medium'&gt;美景画廊&lt;/a&gt;
+        &lt;a href='#experience' class='text-white hover:text-accent transition-colors font-medium'&gt;游玩体验&lt;/a&gt;
+        &lt;a href='#contact' class='text-white hover:text-accent transition-colors font-medium'&gt;联系我们&lt;/a&gt;
+      &lt;/div&gt;
+      
+      &lt;!-- 移动端菜单按钮 --&gt;
+      &lt;button id='menuBtn' class='md:hidden text-white text-2xl focus:outline-none'&gt;
+        &lt;i class='fa fa-bars'&gt;&lt;/i&gt;
+      &lt;/button&gt;
+    &lt;/nav&gt;
+    
+    &lt;!-- 移动端导航菜单 --&gt;
+    &lt;div id='mobileMenu' class='hidden md:hidden bg-white shadow-lg absolute w-full py-4 px-6'&gt;
+      &lt;div class='flex flex-col space-y-4'&gt;
+        &lt;a href='#home' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'&gt;首页&lt;/a&gt;
+        &lt;a href='#attractions' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'&gt;景点介绍&lt;/a&gt;
+        &lt;a href='#gallery' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'&gt;美景画廊&lt;/a&gt;
+        &lt;a href='#experience' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'&gt;游玩体验&lt;/a&gt;
+        &lt;a href='#contact' class='text-dark hover:text-primary transition-colors font-medium py-2'&gt;联系我们&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+
+  &lt;!-- 英雄区域 --&gt;
+  &lt;section id='home' class='relative h-screen flex items-center justify-center overflow-hidden'&gt;
+    &lt;div class='absolute inset-0 z-0'&gt;
+      &lt;div class='absolute inset-0 bg-gradient-to-b from-dark/70 to-dark/40 z-10'&gt;&lt;/div&gt;
+      &lt;img src='https://picsum.photos/id/10/1920/1080' alt='观澜美景' class='w-full h-full object-cover object-center'&gt;
+    &lt;/div&gt;
+    
+    &lt;div class='container mx-auto px-6 z-20 text-center'&gt;
+      &lt;h1 class='text-[clamp(2.5rem,8vw,5rem)] font-bold text-white text-shadow-lg leading-tight mb-6 animate-float'&gt;
+        探索观澜&lt;br&gt;自然之美
+      &lt;/h1&gt;
+      &lt;p class='text-[clamp(1rem,3vw,1.5rem)] text-white text-shadow max-w-3xl mx-auto mb-10'&gt;
+        沉浸在观澜如画的自然风光中，感受山水间的宁静与生命的律动
+      &lt;/p&gt;
+      &lt;div class='flex flex-col sm:flex-row justify-center gap-4'&gt;
+        &lt;a href='#attractions' class='px-8 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg'&gt;
+          探索景点
+        &lt;/a&gt;
+        &lt;a href='#gallery' class='px-8 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 border border-white/40'&gt;
+          浏览画廊
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class='absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce'&gt;
+      &lt;a href='#attractions' class='text-white text-3xl opacity-80 hover:opacity-100 transition-opacity'&gt;
+        &lt;i class='fa fa-chevron-down'&gt;&lt;/i&gt;
+      &lt;/a&gt;
+    &lt;/div&gt;
+  &lt;/section&gt;
+
+  &lt;!-- 景点介绍 --&gt;
+  &lt;section id='attractions' class='py-20 bg-white'&gt;
+    &lt;div class='container mx-auto px-6'&gt;
+      &lt;div class='text-center mb-16'&gt;
+        &lt;h2 class='text-[clamp(1.8rem,5vw,3rem)] font-bold text-dark mb-4'&gt;观澜必游景点&lt;/h2&gt;
+        &lt;p class='text-gray-600 max-w-3xl mx-auto text-lg'&gt;探索观澜最具代表性的自然和人文景观，感受独特的魅力与风情&lt;/p&gt;
+      &lt;/div&gt;
+      
+      &lt;div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'&gt;
+        &lt;!-- 景点卡片 1 --&gt;
+        &lt;div class='bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group'&gt;
+          &lt;div class='h-64 overflow-hidden'&gt;
+            &lt;img src='https://picsum.photos/id/15/800/600' alt='观澜湖' class='w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500'&gt;
+          &lt;/div&gt;
+          &lt;div class='p-6'&gt;
+            &lt;div class='flex justify-between items-start mb-4'&gt;
+              &lt;h3 class='text-xl font-semibold'&gt;观澜湖&lt;/h3&gt;
+              &lt;span class='bg-accent/10 text-accent text-sm font-medium px-3 py-1 rounded-full'&gt;自然景观&lt;/span&gt;
+            &lt;/div&gt;
+            &lt;p class='text-gray-600 mb-4'&gt;清澈湛蓝的湖水倒映着周围的山峦，四季景色各异，是观澜最具代表性的自然景观之一。</description><guid isPermaLink="true">https://danzeng1.github.io/DaHH.githud.ao/post/lan-jing.html</guid><pubDate>Fri, 09 May 2025 08:42:17 +0000</pubDate></item></channel></rss>

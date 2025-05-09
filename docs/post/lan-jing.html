@@ -1,0 +1,1208 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>观澜景色 - 探索自然之美</title>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' rel='stylesheet'>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E88E5',
+            secondary: '#4DB6AC',
+            accent: '#FF9800',
+            neutral: '#F5F7FA',
+            dark: '#2A3342'
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type='text/tailwindcss'>
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      .text-shadow-lg {
+        text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body class='font-inter bg-neutral text-dark antialiased'>
+  <!-- 导航栏 -->
+  <header id='navbar' class='fixed w-full top-0 z-50 transition-all duration-300'>
+    <nav class='bg-transparent py-4 px-6 md:px-12 flex justify-between items-center'>
+      <div class='flex items-center'>
+        <a href='#' class='text-2xl font-bold text-white text-shadow flex items-center'>
+          <i class='fa fa-mountain mr-2'></i>
+          <span>观澜景色</span>
+        </a>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class='hidden md:flex items-center space-x-8'>
+        <a href='#home' class='text-white hover:text-accent transition-colors font-medium'>首页</a>
+        <a href='#attractions' class='text-white hover:text-accent transition-colors font-medium'>景点介绍</a>
+        <a href='#gallery' class='text-white hover:text-accent transition-colors font-medium'>美景画廊</a>
+        <a href='#experience' class='text-white hover:text-accent transition-colors font-medium'>游玩体验</a>
+        <a href='#contact' class='text-white hover:text-accent transition-colors font-medium'>联系我们</a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id='menuBtn' class='md:hidden text-white text-2xl focus:outline-none'>
+        <i class='fa fa-bars'></i>
+      </button>
+    </nav>
+    
+    <!-- 移动端导航菜单 -->
+    <div id='mobileMenu' class='hidden md:hidden bg-white shadow-lg absolute w-full py-4 px-6'>
+      <div class='flex flex-col space-y-4'>
+        <a href='#home' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'>首页</a>
+        <a href='#attractions' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'>景点介绍</a>
+        <a href='#gallery' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'>美景画廊</a>
+        <a href='#experience' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'>游玩体验</a>
+        <a href='#contact' class='text-dark hover:text-primary transition-colors font-medium py-2'>联系我们</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 英雄区域 -->
+  <section id='home' class='relative h-screen flex items-center justify-center overflow-hidden'>
+    <div class='absolute inset-0 z-0'>
+      <div class='absolute inset-0 bg-gradient-to-b from-dark/70 to-dark/40 z-10'></div>
+      <img src='https://picsum.photos/id/10/1920/1080' alt='观澜美景' class='w-full h-full object-cover object-center'>
+    </div>
+    
+    <div class='container mx-auto px-6 z-20 text-center'>
+      <h1 class='text-[clamp(2.5rem,8vw,5rem)] font-bold text-white text-shadow-lg leading-tight mb-6 animate-float'>
+        探索观澜<br>自然之美
+      </h1>
+      <p class='text-[clamp(1rem,3vw,1.5rem)] text-white text-shadow max-w-3xl mx-auto mb-10'>
+        沉浸在观澜如画的自然风光中，感受山水间的宁静与生命的律动
+      </p>
+      <div class='flex flex-col sm:flex-row justify-center gap-4'>
+        <a href='#attractions' class='px-8 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg'>
+          探索景点
+        </a>
+        <a href='#gallery' class='px-8 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 border border-white/40'>
+          浏览画廊
+        </a>
+      </div>
+    </div>
+    
+    <div class='absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce'>
+      <a href='#attractions' class='text-white text-3xl opacity-80 hover:opacity-100 transition-opacity'>
+        <i class='fa fa-chevron-down'></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- 景点介绍 -->
+  <section id='attractions' class='py-20 bg-white'>
+    <div class='container mx-auto px-6'>
+      <div class='text-center mb-16'>
+        <h2 class='text-[clamp(1.8rem,5vw,3rem)] font-bold text-dark mb-4'>观澜必游景点</h2>
+        <p class='text-gray-600 max-w-3xl mx-auto text-lg'>探索观澜最具代表性的自然和人文景观，感受独特的魅力与风情</p>
+      </div>
+      
+      <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <!-- 景点卡片 1 -->
+        <div class='bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group'>
+          <div class='h-64 overflow-hidden'>
+            <img src='https://picsum.photos/id/15/800/600' alt='观澜湖' class='w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500'>
+          </div>
+          <div class='p-6'>
+            <div class='flex justify-between items-start mb-4'>
+              <h3 class='text-xl font-semibold'>观澜湖</h3>
+              <span class='bg-accent/10 text-accent text-sm font-medium px-3 py-1 rounded-full'>自然景观</span>
+            </div>
+            <p class='text-gray-600 mb-4'>清澈湛蓝的湖水倒映着周围的山峦，四季景色各异，是观澜最具代表性的自然景观之一。">
+<meta property="og:title" content="览境">
+<meta property="og:description" content="<!DOCTYPE html>
+<html lang='zh-CN'>
+<head>
+  <meta charset='UTF-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+  <title>观澜景色 - 探索自然之美</title>
+  <script src='https://cdn.tailwindcss.com'></script>
+  <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css' rel='stylesheet'>
+  <link rel='preconnect' href='https://fonts.googleapis.com'>
+  <link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+  <link href='https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap' rel='stylesheet'>
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E88E5',
+            secondary: '#4DB6AC',
+            accent: '#FF9800',
+            neutral: '#F5F7FA',
+            dark: '#2A3342'
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <style type='text/tailwindcss'>
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      .text-shadow-lg {
+        text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+    
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+  </style>
+</head>
+<body class='font-inter bg-neutral text-dark antialiased'>
+  <!-- 导航栏 -->
+  <header id='navbar' class='fixed w-full top-0 z-50 transition-all duration-300'>
+    <nav class='bg-transparent py-4 px-6 md:px-12 flex justify-between items-center'>
+      <div class='flex items-center'>
+        <a href='#' class='text-2xl font-bold text-white text-shadow flex items-center'>
+          <i class='fa fa-mountain mr-2'></i>
+          <span>观澜景色</span>
+        </a>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class='hidden md:flex items-center space-x-8'>
+        <a href='#home' class='text-white hover:text-accent transition-colors font-medium'>首页</a>
+        <a href='#attractions' class='text-white hover:text-accent transition-colors font-medium'>景点介绍</a>
+        <a href='#gallery' class='text-white hover:text-accent transition-colors font-medium'>美景画廊</a>
+        <a href='#experience' class='text-white hover:text-accent transition-colors font-medium'>游玩体验</a>
+        <a href='#contact' class='text-white hover:text-accent transition-colors font-medium'>联系我们</a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id='menuBtn' class='md:hidden text-white text-2xl focus:outline-none'>
+        <i class='fa fa-bars'></i>
+      </button>
+    </nav>
+    
+    <!-- 移动端导航菜单 -->
+    <div id='mobileMenu' class='hidden md:hidden bg-white shadow-lg absolute w-full py-4 px-6'>
+      <div class='flex flex-col space-y-4'>
+        <a href='#home' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'>首页</a>
+        <a href='#attractions' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'>景点介绍</a>
+        <a href='#gallery' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'>美景画廊</a>
+        <a href='#experience' class='text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100'>游玩体验</a>
+        <a href='#contact' class='text-dark hover:text-primary transition-colors font-medium py-2'>联系我们</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- 英雄区域 -->
+  <section id='home' class='relative h-screen flex items-center justify-center overflow-hidden'>
+    <div class='absolute inset-0 z-0'>
+      <div class='absolute inset-0 bg-gradient-to-b from-dark/70 to-dark/40 z-10'></div>
+      <img src='https://picsum.photos/id/10/1920/1080' alt='观澜美景' class='w-full h-full object-cover object-center'>
+    </div>
+    
+    <div class='container mx-auto px-6 z-20 text-center'>
+      <h1 class='text-[clamp(2.5rem,8vw,5rem)] font-bold text-white text-shadow-lg leading-tight mb-6 animate-float'>
+        探索观澜<br>自然之美
+      </h1>
+      <p class='text-[clamp(1rem,3vw,1.5rem)] text-white text-shadow max-w-3xl mx-auto mb-10'>
+        沉浸在观澜如画的自然风光中，感受山水间的宁静与生命的律动
+      </p>
+      <div class='flex flex-col sm:flex-row justify-center gap-4'>
+        <a href='#attractions' class='px-8 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg'>
+          探索景点
+        </a>
+        <a href='#gallery' class='px-8 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 border border-white/40'>
+          浏览画廊
+        </a>
+      </div>
+    </div>
+    
+    <div class='absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce'>
+      <a href='#attractions' class='text-white text-3xl opacity-80 hover:opacity-100 transition-opacity'>
+        <i class='fa fa-chevron-down'></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- 景点介绍 -->
+  <section id='attractions' class='py-20 bg-white'>
+    <div class='container mx-auto px-6'>
+      <div class='text-center mb-16'>
+        <h2 class='text-[clamp(1.8rem,5vw,3rem)] font-bold text-dark mb-4'>观澜必游景点</h2>
+        <p class='text-gray-600 max-w-3xl mx-auto text-lg'>探索观澜最具代表性的自然和人文景观，感受独特的魅力与风情</p>
+      </div>
+      
+      <div class='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
+        <!-- 景点卡片 1 -->
+        <div class='bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group'>
+          <div class='h-64 overflow-hidden'>
+            <img src='https://picsum.photos/id/15/800/600' alt='观澜湖' class='w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500'>
+          </div>
+          <div class='p-6'>
+            <div class='flex justify-between items-start mb-4'>
+              <h3 class='text-xl font-semibold'>观澜湖</h3>
+              <span class='bg-accent/10 text-accent text-sm font-medium px-3 py-1 rounded-full'>自然景观</span>
+            </div>
+            <p class='text-gray-600 mb-4'>清澈湛蓝的湖水倒映着周围的山峦，四季景色各异，是观澜最具代表性的自然景观之一。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://danzeng1.github.io/DaHH.githud.ao/post/lan-jing.html">
+<meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+<title>览境</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+.copy-feedback {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 50px;
+    color: var(--color-fg-on-emphasis);
+    background-color: var(--color-fg-muted);
+    border-radius: 3px;
+    padding: 5px 8px;
+    font-size: 12px;
+}
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">览境</h1>
+<div class="title-right">
+    <a href="https://danzeng1.github.io/DaHH.githud.ao" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/danzeng1/DaHH.githud.ao/issues/1" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody">
+
+
+  
+  
+  &lt;title&gt;观澜景色 - 探索自然之美&lt;/title&gt;
+  &lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;
+  
+  
+  
+  
+  &lt;script&gt;
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E88E5',
+            secondary: '#4DB6AC',
+            accent: '#FF9800',
+            neutral: '#F5F7FA',
+            dark: '#2A3342'
+          },
+          fontFamily: {
+            inter: ['Inter', 'sans-serif'],
+          },
+        },
+      }
+    }
+  &lt;/script&gt;
+  &lt;style type="text/tailwindcss"&gt;
+    <a class="user-mention notranslate" data-hovercard-type="organization" data-hovercard-url="/orgs/layer/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/layer">@layer</a> utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      .text-shadow-lg {
+        text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      }
+      .animate-float {
+        animation: float 6s ease-in-out infinite;
+      }
+      .scrollbar-hide::-webkit-scrollbar {
+        display: none;
+      }
+      .scrollbar-hide {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    }
+    
+    <a class="user-mention notranslate" data-hovercard-type="organization" data-hovercard-url="/orgs/Keyframes/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/Keyframes">@Keyframes</a> float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-15px); }
+      100% { transform: translateY(0px); }
+    }
+  &lt;/style&gt;
+
+
+  
+  
+    
+      <div>
+        <a href="#">
+          <i></i>
+          <span>观澜景色</span>
+        </a>
+      </div>
+<pre class="notranslate"><code class="notranslate">  &lt;!-- 桌面导航 --&gt;
+  &lt;div class="hidden md:flex items-center space-x-8"&gt;
+    &lt;a href="#home" class="text-white hover:text-accent transition-colors font-medium"&gt;首页&lt;/a&gt;
+    &lt;a href="#attractions" class="text-white hover:text-accent transition-colors font-medium"&gt;景点介绍&lt;/a&gt;
+    &lt;a href="#gallery" class="text-white hover:text-accent transition-colors font-medium"&gt;美景画廊&lt;/a&gt;
+    &lt;a href="#experience" class="text-white hover:text-accent transition-colors font-medium"&gt;游玩体验&lt;/a&gt;
+    &lt;a href="#contact" class="text-white hover:text-accent transition-colors font-medium"&gt;联系我们&lt;/a&gt;
+  &lt;/div&gt;
+  
+  &lt;!-- 移动端菜单按钮 --&gt;
+  &lt;button id="menuBtn" class="md:hidden text-white text-2xl focus:outline-none"&gt;
+    &lt;i class="fa fa-bars"&gt;&lt;/i&gt;
+  &lt;/button&gt;
+&lt;/nav&gt;
+
+&lt;!-- 移动端导航菜单 --&gt;
+&lt;div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg absolute w-full py-4 px-6"&gt;
+  &lt;div class="flex flex-col space-y-4"&gt;
+    &lt;a href="#home" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100"&gt;首页&lt;/a&gt;
+    &lt;a href="#attractions" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100"&gt;景点介绍&lt;/a&gt;
+    &lt;a href="#gallery" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100"&gt;美景画廊&lt;/a&gt;
+    &lt;a href="#experience" class="text-dark hover:text-primary transition-colors font-medium py-2 border-b border-gray-100"&gt;游玩体验&lt;/a&gt;
+    &lt;a href="#contact" class="text-dark hover:text-primary transition-colors font-medium py-2"&gt;联系我们&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  
+  
+  <section id="user-content-home">
+    <div>
+      <div></div>
+      <a target="_blank" rel="noopener noreferrer nofollow" href="https://camo.githubusercontent.com/12e854ebbfc0fd238cc34186b9444df24d11be819493bdad66c7b4a1aa352889/68747470733a2f2f70696373756d2e70686f746f732f69642f31302f313932302f31303830"><img src="https://camo.githubusercontent.com/12e854ebbfc0fd238cc34186b9444df24d11be819493bdad66c7b4a1aa352889/68747470733a2f2f70696373756d2e70686f746f732f69642f31302f313932302f31303830" alt="观澜美景" data-canonical-src="https://picsum.photos/id/10/1920/1080" style="max-width: 100%;"></a>
+    </div>
+<pre class="notranslate"><code class="notranslate">&lt;div class="container mx-auto px-6 z-20 text-center"&gt;
+  &lt;h1 class="text-[clamp(2.5rem,8vw,5rem)] font-bold text-white text-shadow-lg leading-tight mb-6 animate-float"&gt;
+    探索观澜&lt;br&gt;自然之美
+  &lt;/h1&gt;
+  &lt;p class="text-[clamp(1rem,3vw,1.5rem)] text-white text-shadow max-w-3xl mx-auto mb-10"&gt;
+    沉浸在观澜如画的自然风光中，感受山水间的宁静与生命的律动
+  &lt;/p&gt;
+  &lt;div class="flex flex-col sm:flex-row justify-center gap-4"&gt;
+    &lt;a href="#attractions" class="px-8 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"&gt;
+      探索景点
+    &lt;/a&gt;
+    &lt;a href="#gallery" class="px-8 py-3 bg-white/20 hover:bg-white/30 backdrop-blur-sm text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 border border-white/40"&gt;
+      浏览画廊
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-bounce"&gt;
+  &lt;a href="#attractions" class="text-white text-3xl opacity-80 hover:opacity-100 transition-opacity"&gt;
+    &lt;i class="fa fa-chevron-down"&gt;&lt;/i&gt;
+  &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+  </section>
+  
+  <section id="user-content-attractions">
+    <div>
+      <div>
+        <h2>观澜必游景点</h2>
+        <p>探索观澜最具代表性的自然和人文景观，感受独特的魅力与风情</p>
+      </div>
+<pre class="notranslate"><code class="notranslate">  &lt;div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"&gt;
+    &lt;!-- 景点卡片 1 --&gt;
+    &lt;div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"&gt;
+      &lt;div class="h-64 overflow-hidden"&gt;
+        &lt;img src="https://picsum.photos/id/15/800/600" alt="观澜湖" class="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500"&gt;
+      &lt;/div&gt;
+      &lt;div class="p-6"&gt;
+        &lt;div class="flex justify-between items-start mb-4"&gt;
+          &lt;h3 class="text-xl font-semibold"&gt;观澜湖&lt;/h3&gt;
+          &lt;span class="bg-accent/10 text-accent text-sm font-medium px-3 py-1 rounded-full"&gt;自然景观&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;p class="text-gray-600 mb-4"&gt;清澈湛蓝的湖水倒映着周围的山峦，四季景色各异，是观澜最具代表性的自然景观之一。&lt;/p&gt;
+        &lt;div class="flex items-center text-sm text-gray-500"&gt;
+          &lt;i class="fa fa-map-marker-alt mr-1"&gt;&lt;/i&gt;
+          &lt;span&gt;广东省深圳市龙华区&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- 景点卡片 2 --&gt;
+    &lt;div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"&gt;
+      &lt;div class="h-64 overflow-hidden"&gt;
+        &lt;img src="https://picsum.photos/id/28/800/600" alt="版画村" class="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500"&gt;
+      &lt;/div&gt;
+      &lt;div class="p-6"&gt;
+        &lt;div class="flex justify-between items-start mb-4"&gt;
+          &lt;h3 class="text-xl font-semibold"&gt;观澜版画村&lt;/h3&gt;
+          &lt;span class="bg-secondary/10 text-secondary text-sm font-medium px-3 py-1 rounded-full"&gt;人文景观&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;p class="text-gray-600 mb-4"&gt;有着悠久历史的古村落，以传统版画艺术闻名，保留了大量明清时期的建筑风貌。&lt;/p&gt;
+        &lt;div class="flex items-center text-sm text-gray-500"&gt;
+          &lt;i class="fa fa-map-marker-alt mr-1"&gt;&lt;/i&gt;
+          &lt;span&gt;广东省深圳市龙华区&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- 景点卡片 3 --&gt;
+    &lt;div class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow group"&gt;
+      &lt;div class="h-64 overflow-hidden"&gt;
+        &lt;img src="https://picsum.photos/id/42/800/600" alt="山水田园" class="w-full h-full object-cover object-center transform group-hover:scale-110 transition-transform duration-500"&gt;
+      &lt;/div&gt;
+      &lt;div class="p-6"&gt;
+        &lt;div class="flex justify-between items-start mb-4"&gt;
+          &lt;h3 class="text-xl font-semibold"&gt;山水田园&lt;/h3&gt;
+          &lt;span class="bg-primary/10 text-primary text-sm font-medium px-3 py-1 rounded-full"&gt;休闲胜地&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;p class="text-gray-600 mb-4"&gt;集自然风光与休闲娱乐于一体的度假胜地，适合家庭出游和放松身心。&lt;/p&gt;
+        &lt;div class="flex items-center text-sm text-gray-500"&gt;
+          &lt;i class="fa fa-map-marker-alt mr-1"&gt;&lt;/i&gt;
+          &lt;span&gt;广东省深圳市龙华区&lt;/span&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="text-center mt-12"&gt;
+    &lt;a href="#" class="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-md"&gt;
+      查看更多景点
+      &lt;i class="fa fa-arrow-right ml-2"&gt;&lt;/i&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  </div></section>
+  
+  <section id="user-content-gallery">
+    <div>
+      <div>
+        <h2>观澜美景画廊</h2>
+        <p>欣赏观澜四季变换的自然风光，感受大自然的鬼斧神工</p>
+      </div>
+<pre class="notranslate"><code class="notranslate">  &lt;div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"&gt;
+    &lt;!-- 画廊图片 1 --&gt;
+    &lt;div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer"&gt;
+      &lt;img src="https://picsum.photos/id/29/800/1000" alt="观澜春色" class="w-full h-80 object-cover object-center transition-transform duration-500 group-hover:scale-110"&gt;
+      &lt;div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"&gt;
+        &lt;div class="p-6 text-white"&gt;
+          &lt;h3 class="text-xl font-semibold mb-2"&gt;春日繁花&lt;/h3&gt;
+          &lt;p class="text-sm text-gray-200"&gt;春天的观澜，万物复苏，百花争艳&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- 画廊图片 2 --&gt;
+    &lt;div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer"&gt;
+      &lt;img src="https://picsum.photos/id/27/800/1000" alt="观澜夏日" class="w-full h-80 object-cover object-center transition-transform duration-500 group-hover:scale-110"&gt;
+      &lt;div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"&gt;
+        &lt;div class="p-6 text-white"&gt;
+          &lt;h3 class="text-xl font-semibold mb-2"&gt;夏日绿意&lt;/h3&gt;
+          &lt;p class="text-sm text-gray-200"&gt;夏天的观澜，绿树成荫，湖水清凉&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- 画廊图片 3 --&gt;
+    &lt;div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer"&gt;
+      &lt;img src="https://picsum.photos/id/30/800/1000" alt="观澜秋色" class="w-full h-80 object-cover object-center transition-transform duration-500 group-hover:scale-110"&gt;
+      &lt;div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"&gt;
+        &lt;div class="p-6 text-white"&gt;
+          &lt;h3 class="text-xl font-semibold mb-2"&gt;秋日红叶&lt;/h3&gt;
+          &lt;p class="text-sm text-gray-200"&gt;秋天的观澜，层林尽染，色彩斑斓&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- 画廊图片 4 --&gt;
+    &lt;div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer"&gt;
+      &lt;img src="https://picsum.photos/id/12/800/1000" alt="观澜冬雪" class="w-full h-80 object-cover object-center transition-transform duration-500 group-hover:scale-110"&gt;
+      &lt;div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"&gt;
+        &lt;div class="p-6 text-white"&gt;
+          &lt;h3 class="text-xl font-semibold mb-2"&gt;冬日雪景&lt;/h3&gt;
+          &lt;p class="text-sm text-gray-200"&gt;冬天的观澜，银装素裹，宁静祥和&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- 画廊图片 5 --&gt;
+    &lt;div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer"&gt;
+      &lt;img src="https://picsum.photos/id/13/800/1000" alt="观澜日出" class="w-full h-80 object-cover object-center transition-transform duration-500 group-hover:scale-110"&gt;
+      &lt;div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"&gt;
+        &lt;div class="p-6 text-white"&gt;
+          &lt;h3 class="text-xl font-semibold mb-2"&gt;日出东方&lt;/h3&gt;
+          &lt;p class="text-sm text-gray-200"&gt;观澜的清晨，朝阳初升，光芒万丈&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- 画廊图片 6 --&gt;
+    &lt;div class="group relative overflow-hidden rounded-xl shadow-md cursor-pointer"&gt;
+      &lt;img src="https://picsum.photos/id/14/800/1000" alt="观澜星空" class="w-full h-80 object-cover object-center transition-transform duration-500 group-hover:scale-110"&gt;
+      &lt;div class="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"&gt;
+        &lt;div class="p-6 text-white"&gt;
+          &lt;h3 class="text-xl font-semibold mb-2"&gt;璀璨星空&lt;/h3&gt;
+          &lt;p class="text-sm text-gray-200"&gt;观澜的夜晚，繁星点点，宁静而美丽&lt;/p&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="text-center mt-12"&gt;
+    &lt;button id="loadMoreBtn" class="inline-flex items-center px-6 py-3 bg-white hover:bg-gray-50 text-primary border border-primary font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-sm"&gt;
+      加载更多图片
+      &lt;i class="fa fa-refresh ml-2"&gt;&lt;/i&gt;
+    &lt;/button&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  </div></section>
+  
+  <section id="user-content-experience">
+    <div>
+      <div>
+        <h2>游玩体验</h2>
+        <p>听听游客们分享他们在观澜的美好回忆和独特体验</p>
+      </div>
+<pre class="notranslate"><code class="notranslate">  &lt;div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center"&gt;
+    &lt;div class="order-2 md:order-1"&gt;
+      &lt;div class="bg-white p-8 rounded-xl shadow-lg relative"&gt;
+        &lt;div class="absolute -top-6 -left-6 text-6xl text-primary/10"&gt;"&lt;/div&gt;
+        &lt;p class="text-gray-700 text-lg mb-6 relative z-10"&gt;在观澜的这几天，我仿佛置身于画卷之中。清晨在湖边散步，呼吸着清新的空气，看着日出慢慢照亮整个湖面，那景色简直太美了。版画村也很有特色，能感受到浓厚的文化氛围。下次一定还会再来！&lt;/p&gt;
+        &lt;div class="flex items-center"&gt;
+          &lt;img src="https://picsum.photos/id/64/100/100" alt="游客照片" class="w-12 h-12 rounded-full object-cover mr-4"&gt;
+          &lt;div&gt;
+            &lt;h4 class="font-semibold"&gt;李明&lt;/h4&gt;
+            &lt;p class="text-gray-500 text-sm"&gt;来自上海&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div class="bg-white p-8 rounded-xl shadow-lg mt-8 relative"&gt;
+        &lt;div class="absolute -top-6 -left-6 text-6xl text-primary/10"&gt;"&lt;/div&gt;
+        &lt;p class="text-gray-700 text-lg mb-6 relative z-10"&gt;带家人来观澜度假，山水田园的环境非常好，设施也很完善。孩子们玩得特别开心，还有很多亲子活动可以参加。晚上住在湖边的小木屋里，听着蛙鸣虫叫，感觉特别放松。&lt;/p&gt;
+        &lt;div class="flex items-center"&gt;
+          &lt;img src="https://picsum.photos/id/65/100/100" alt="游客照片" class="w-12 h-12 rounded-full object-cover mr-4"&gt;
+          &lt;div&gt;
+            &lt;h4 class="font-semibold"&gt;王芳&lt;/h4&gt;
+            &lt;p class="text-gray-500 text-sm"&gt;来自北京&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;div class="order-1 md:order-2 relative"&gt;
+      &lt;img src="https://picsum.photos/id/25/800/1000" alt="游客体验" class="w-full h-auto rounded-xl shadow-xl"&gt;
+      &lt;div class="absolute -bottom-6 -right-6 bg-white p-6 rounded-xl shadow-lg max-w-xs"&gt;
+        &lt;div class="flex items-center mb-4"&gt;
+          &lt;div class="text-accent"&gt;
+            &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+            &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+            &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+            &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+            &lt;i class="fa fa-star"&gt;&lt;/i&gt;
+          &lt;/div&gt;
+          &lt;span class="ml-2 font-semibold"&gt;4.9/5&lt;/span&gt;
+        &lt;/div&gt;
+        &lt;p class="text-gray-600 text-sm"&gt;基于2,500+游客评价&lt;/p&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="mt-16 bg-gray-50 rounded-2xl p-8 md:p-12"&gt;
+    &lt;div class="flex flex-col md:flex-row items-center"&gt;
+      &lt;div class="md:w-1/2 mb-8 md:mb-0 md:pr-8"&gt;
+        &lt;h3 class="text-2xl font-bold mb-4"&gt;计划你的观澜之旅&lt;/h3&gt;
+        &lt;p class="text-gray-600 mb-6"&gt;无论你是想欣赏自然风光，体验文化艺术，还是寻找一个宁静的度假胜地，观澜都能满足你的需求。填写下方表单，获取个性化的旅行建议。&lt;/p&gt;
+        &lt;a href="#contact" class="inline-flex items-center px-6 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-full transition-all duration-300 transform hover:scale-105 shadow-md"&gt;
+          获取旅行指南
+          &lt;i class="fa fa-arrow-right ml-2"&gt;&lt;/i&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+      &lt;div class="md:w-1/2 md:border-l md:pl-8"&gt;
+        &lt;div class="grid grid-cols-2 gap-6"&gt;
+          &lt;div class="text-center"&gt;
+            &lt;div class="text-4xl font-bold text-primary mb-2"&gt;20+&lt;/div&gt;
+            &lt;p class="text-gray-600"&gt;景点&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="text-center"&gt;
+            &lt;div class="text-4xl font-bold text-primary mb-2"&gt;15+&lt;/div&gt;
+            &lt;p class="text-gray-600"&gt;美食餐厅&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="text-center"&gt;
+            &lt;div class="text-4xl font-bold text-primary mb-2"&gt;10+&lt;/div&gt;
+            &lt;p class="text-gray-600"&gt;住宿选择&lt;/p&gt;
+          &lt;/div&gt;
+          &lt;div class="text-center"&gt;
+            &lt;div class="text-4xl font-bold text-primary mb-2"&gt;4.9&lt;/div&gt;
+            &lt;p class="text-gray-600"&gt;游客评分&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  </div></section>
+  
+  <section id="user-content-contact">
+    <div>
+      <div>
+        <h2>联系我们</h2>
+        <p>有任何问题或需要更多信息？请随时与我们联系</p>
+      </div>
+<pre class="notranslate"><code class="notranslate">  &lt;div class="grid grid-cols-1 lg:grid-cols-2 gap-12"&gt;
+    &lt;div class="bg-white p-8 rounded-xl shadow-lg"&gt;
+      &lt;h3 class="text-xl font-semibold mb-6"&gt;发送消息&lt;/h3&gt;
+      &lt;form&gt;
+        &lt;div class="mb-6"&gt;
+          &lt;label for="name" class="block text-gray-700 font-medium mb-2"&gt;姓名&lt;/label&gt;
+          &lt;input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-6"&gt;
+          &lt;label for="email" class="block text-gray-700 font-medium mb-2"&gt;电子邮箱&lt;/label&gt;
+          &lt;input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-6"&gt;
+          &lt;label for="subject" class="block text-gray-700 font-medium mb-2"&gt;主题&lt;/label&gt;
+          &lt;input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"&gt;
+        &lt;/div&gt;
+        &lt;div class="mb-6"&gt;
+          &lt;label for="message" class="block text-gray-700 font-medium mb-2"&gt;消息&lt;/label&gt;
+          &lt;textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all"&gt;&lt;/textarea&gt;
+        &lt;/div&gt;
+        &lt;button type="submit" class="w-full px-6 py-3 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-all duration-300 transform hover:scale-[1.02] shadow-md"&gt;
+          发送消息
+        &lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+    
+    &lt;div&gt;
+      &lt;div class="bg-white p-8 rounded-xl shadow-lg mb-8"&gt;
+        &lt;h3 class="text-xl font-semibold mb-6"&gt;联系方式&lt;/h3&gt;
+        &lt;div class="space-y-4"&gt;
+          &lt;div class="flex items-start"&gt;
+            &lt;div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4"&gt;
+              &lt;i class="fa fa-map-marker-alt"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;h4 class="font-medium mb-1"&gt;地址&lt;/h4&gt;
+              &lt;p class="text-gray-600"&gt;广东省深圳市龙华区观澜街道&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex items-start"&gt;
+            &lt;div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4"&gt;
+              &lt;i class="fa fa-phone"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;h4 class="font-medium mb-1"&gt;电话&lt;/h4&gt;
+              &lt;p class="text-gray-600"&gt;+86 755-12345678&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex items-start"&gt;
+            &lt;div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4"&gt;
+              &lt;i class="fa fa-envelope"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;h4 class="font-medium mb-1"&gt;电子邮箱&lt;/h4&gt;
+              &lt;p class="text-gray-600"&gt;info@guanlan-scenery.com&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+          &lt;div class="flex items-start"&gt;
+            &lt;div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary mr-4"&gt;
+              &lt;i class="fa fa-clock"&gt;&lt;/i&gt;
+            &lt;/div&gt;
+            &lt;div&gt;
+              &lt;h4 class="font-medium mb-1"&gt;开放时间&lt;/h4&gt;
+              &lt;p class="text-gray-600"&gt;每天 9:00 - 18:00&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+      
+      &lt;div class="bg-white p-8 rounded-xl shadow-lg"&gt;
+        &lt;h3 class="text-xl font-semibold mb-6"&gt;关注我们&lt;/h3&gt;
+        &lt;div class="flex space-x-4"&gt;
+          &lt;a href="#" class="w-12 h-12 rounded-full bg-[#1877F2] flex items-center justify-center text-white hover:bg-[#1877F2]/90 transition-colors"&gt;
+            &lt;i class="fa fa-facebook"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;a href="#" class="w-12 h-12 rounded-full bg-[#1DA1F2] flex items-center justify-center text-white hover:bg-[#1DA1F2]/90 transition-colors"&gt;
+            &lt;i class="fa fa-twitter"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;a href="#" class="w-12 h-12 rounded-full bg-[#E4405F] flex items-center justify-center text-white hover:bg-[#E4405F]/90 transition-colors"&gt;
+            &lt;i class="fa fa-instagram"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;a href="#" class="w-12 h-12 rounded-full bg-[#FF0000] flex items-center justify-center text-white hover:bg-[#FF0000]/90 transition-colors"&gt;
+            &lt;i class="fa fa-youtube"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+          &lt;a href="#" class="w-12 h-12 rounded-full bg-[#07C160] flex items-center justify-center text-white hover:bg-[#07C160]/90 transition-colors"&gt;
+            &lt;i class="fa fa-weixin"&gt;&lt;/i&gt;
+          &lt;/a&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  </div></section>
+  
+  
+    <div>
+      <div>
+        <div>
+          <h3>
+            <i></i>
+            <span>观澜景色</span>
+          </h3>
+          <p>探索自然之美，感受观澜魅力。</p>
+          <div>
+            <a href="#">
+              <i></i>
+            </a>
+            <a href="#">
+              <i></i>
+            </a>
+            <a href="#">
+              <i></i>
+            </a>
+            <a href="#">
+              <i></i>
+            </a>
+          </div>
+        </div>
+<pre class="notranslate"><code class="notranslate">    &lt;div&gt;
+      &lt;h4 class="text-lg font-semibold mb-6"&gt;快速链接&lt;/h4&gt;
+      &lt;ul class="space-y-3"&gt;
+        &lt;li&gt;&lt;a href="#home" class="text-gray-400 hover:text-white transition-colors"&gt;首页&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#attractions" class="text-gray-400 hover:text-white transition-colors"&gt;景点介绍&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#gallery" class="text-gray-400 hover:text-white transition-colors"&gt;美景画廊&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#experience" class="text-gray-400 hover:text-white transition-colors"&gt;游玩体验&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact" class="text-gray-400 hover:text-white transition-colors"&gt;联系我们&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div&gt;
+      &lt;h4 class="text-lg font-semibold mb-6"&gt;景点分类&lt;/h4&gt;
+      &lt;ul class="space-y-3"&gt;
+        &lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-white transition-colors"&gt;自然风光&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-white transition-colors"&gt;人文景观&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-white transition-colors"&gt;休闲娱乐&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-white transition-colors"&gt;美食推荐&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#" class="text-gray-400 hover:text-white transition-colors"&gt;住宿选择&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    
+    &lt;div&gt;
+      &lt;h4 class="text-lg font-semibold mb-6"&gt;订阅通讯&lt;/h4&gt;
+      &lt;p class="text-gray-400 mb-4"&gt;订阅我们的通讯，获取最新的景点信息和优惠活动。&lt;/p&gt;
+      &lt;form class="flex"&gt;
+        &lt;input type="email" placeholder="输入您的电子邮箱" class="px-4 py-2 bg-gray-800 text-white rounded-l-lg focus:outline-none focus:ring-1 focus:ring-primary w-full"&gt;
+        &lt;button type="submit" class="bg-primary hover:bg-primary/90 text-white px-4 py-2 rounded-r-lg transition-colors"&gt;
+          &lt;i class="fa fa-paper-plane"&gt;&lt;/i&gt;
+        &lt;/button&gt;
+      &lt;/form&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  
+  &lt;div class="border-t border-gray-800 pt-8"&gt;
+    &lt;div class="flex flex-col md:flex-row justify-between items-center"&gt;
+      &lt;p class="text-gray-500 text-sm mb-4 md:mb-0"&gt;© 2025 观澜景色. 保留所有权利.&lt;/p&gt;
+      &lt;div class="flex space-x-6"&gt;
+        &lt;a href="#" class="text-gray-500 hover:text-white text-sm transition-colors"&gt;隐私政策&lt;/a&gt;
+        &lt;a href="#" class="text-gray-500 hover:text-white text-sm transition-colors"&gt;使用条款&lt;/a&gt;
+        &lt;a href="#" class="text-gray-500 hover:text-white text-sm transition-colors"&gt;Cookie 政策&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+  </div></div>
+  
+  
+    <i></i>
+  
+  
+  <div id="user-content-imageviewer">
+    
+      <i></i>
+    
+    <a target="_blank" rel="noopener noreferrer" href=""><img id="user-content-viewedimage" src="" alt="大图预览" style="max-width: 100%;"></a>
+  </div>
+  &lt;script&gt;
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    const backToTopBtn = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY &gt; 50) {
+        navbar.classList.add('bg-dark/90', 'backdrop-blur-sm', 'shadow-md');
+        navbar.classList.remove('bg-transparent');
+        backToTopBtn.classList.remove('translate-y-20', 'opacity-0');
+        backToTopBtn.classList.add('translate-y-0', 'opacity-100');
+      } else {
+        navbar.classList.remove('bg-dark/90', 'backdrop-blur-sm', 'shadow-md');
+        navbar.classList.add('bg-transparent');
+        backToTopBtn.classList.add('translate-y-20', 'opacity-0');
+        backToTopBtn.classList.remove('translate-y-0', 'opacity-100');
+      }
+    });
+    
+    // 移动端菜单
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    
+    menuBtn.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+      if (mobileMenu.classList.contains('hidden')) {
+        menuBtn.innerHTML = '<i></i>';
+      } else {
+        menuBtn.innerHTML = '<i></i>';
+      }
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor =&gt; {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        // 关闭移动端菜单
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          menuBtn.innerHTML = '<i></i>';
+        }
+        
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    // 回到顶部按钮
+    backToTopBtn.addEventListener('click', function() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+    
+    // 图片查看器
+    const imageViewer = document.getElementById('imageViewer');
+    const viewedImage = document.getElementById('viewedImage');
+    const closeViewer = document.getElementById('closeViewer');
+    
+    // 打开图片查看器
+    document.querySelectorAll('#gallery img').forEach(img =&gt; {
+      img.addEventListener('click', function() {
+        viewedImage.src = this.src.replace('/800/1000', '/1920/1080');
+        imageViewer.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+    
+    // 关闭图片查看器
+    closeViewer.addEventListener('click', function() {
+      imageViewer.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    });
+    
+    // 点击图片查看器背景关闭
+    imageViewer.addEventListener('click', function(e) {
+      if (e.target === imageViewer) {
+        imageViewer.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+    });
+    
+    // 加载更多图片按钮
+    const loadMoreBtn = document.getElementById('loadMoreBtn');
+    
+    loadMoreBtn.addEventListener('click', function() {
+      this.innerHTML = '<i></i> 加载中...';
+      
+      // 模拟加载延迟
+      setTimeout(() =&gt; {
+        this.innerHTML = '加载更多图片 <i></i>';
+        alert('已加载全部图片');
+      }, 1500);
+    });
+  &lt;/script&gt;
+
+</div>
+<div style="font-size:small;margin-top:8px;float:right;"></div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://danzeng1.github.io/DaHH.githud.ao">Blog Title</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if(""!=""){
+    var startSite=new Date("");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z', 'copy': 'M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z', 'check': 'M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","danzeng1/DaHH.githud.ao");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    const createClipboardHTML = (codeContent, additionalClasses = '') => `
+        <pre class="notranslate"><code class="notranslate">${codeContent}</code></pre>
+        <div class="clipboard-container position-absolute right-0 top-0 ${additionalClasses}">
+            <clipboard-copy class="ClipboardButton btn m-2 p-0" role="button" style="display: inherit;">
+                <svg height="16" width="16" class="octicon octicon-copy m-2"><path d="${IconList["copy"]}"></path></svg>
+                <svg height="16" width="16" class="octicon octicon-check color-fg-success m-2 d-none"><path d="${IconList["check"]}"></path></svg>
+            </clipboard-copy>
+            <div class="copy-feedback">Copied!</div>
+        </div>
+    `;
+
+    const handleCodeElements = (selector = '') => {
+        document.querySelectorAll(selector).forEach(codeElement => {
+            const codeContent = codeElement.innerHTML;
+            const newStructure = document.createElement('div');
+            newStructure.className = 'snippet-clipboard-content position-relative overflow-auto';
+            newStructure.innerHTML = createClipboardHTML(codeContent);
+
+            const parentElement = codeElement.parentElement;
+            if (selector.includes('highlight')) {
+                parentElement.insertBefore(newStructure, codeElement.nextSibling);
+                parentElement.removeChild(codeElement);
+            } else {
+                parentElement.parentElement.replaceChild(newStructure, parentElement);
+            }
+        });
+    };
+
+    handleCodeElements('pre.notranslate > code.notranslate');
+    handleCodeElements('div.highlight > pre.notranslate');
+
+    let currentFeedback = null;
+    document.querySelectorAll('clipboard-copy').forEach(copyButton => {
+        copyButton.addEventListener('click', () => {
+            const codeContent = copyButton.closest('.snippet-clipboard-content').innerText;
+            const tempTextArea = document.createElement('textarea');
+            tempTextArea.value = codeContent;
+            document.body.appendChild(tempTextArea);
+            tempTextArea.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempTextArea);
+
+            const copyIcon = copyButton.querySelector('.octicon-copy');
+            const checkIcon = copyButton.querySelector('.octicon-check');
+            const copyFeedback = copyButton.nextElementSibling;
+
+            if (currentFeedback && currentFeedback !== copyFeedback) {currentFeedback.style.display = 'none';}
+            currentFeedback = copyFeedback;
+
+            copyIcon.classList.add('d-none');
+            checkIcon.classList.remove('d-none');
+            copyFeedback.style.display = 'block';
+            copyButton.style.borderColor = 'var(--color-success-fg)';
+
+            setTimeout(() => {
+                copyIcon.classList.remove('d-none');
+                checkIcon.classList.add('d-none');
+                copyFeedback.style.display = 'none';
+                copyButton.style.borderColor = '';
+            }, 2000);
+        });
+    });
+});
+
+</script>
+
+
+</html>
